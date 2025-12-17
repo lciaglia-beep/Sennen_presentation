@@ -88,6 +88,25 @@
             color: white;
         }
 
+        /* Dark Card Variant - AHORA NEGRO PURO */
+        .bento-card-dark {
+            background-color: #000000; /* Pure Black */
+            border-color: #262626;     /* Neutral 800 */
+            color: white;
+        }
+        .bento-card-dark:hover {
+            border-color: #404040;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        .bento-card-dark .icon-box {
+            background-color: #262626;
+            color: #d4d4d4;
+        }
+        .bento-card-dark:hover .icon-box {
+            background-color: #404040;
+            color: white;
+        }
+
         /* Highlight Core Offer */
         .card-highlight {
             background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
@@ -221,17 +240,17 @@
                 </div>
             </button>
 
-            <!-- 4. CLON DOCTORES / EXPERTOS -->
-            <button onclick="openModal('OFFER_B')" class="lg:col-span-1 bento-card group relative flex flex-col items-start justify-between h-80 p-8 w-full rounded-xl overflow-hidden text-left delay-400 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
+            <!-- 4. CLON DOCTORES / EXPERTOS (BLACK CARD) -->
+            <button onclick="openModal('OFFER_B')" class="lg:col-span-1 bento-card-dark group relative flex flex-col items-start justify-between h-80 p-8 w-full rounded-xl overflow-hidden text-left delay-400 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
                 <div class="relative z-10 p-3 rounded-lg icon-box transition-colors duration-300">
                     <i data-lucide="fingerprint" class="w-6 h-6"></i>
                 </div>
                 <div class="relative z-10 mt-auto">
-                    <span class="text-xs font-mono text-slate-400 mb-2 block">AUTORIDAD CLÍNICA</span>
-                    <h3 class="text-2xl font-medium text-slate-800 transition-colors tracking-tight">Digital Twin MD</h3>
-                    <p class="mt-2 text-sm text-slate-500 font-medium">Escala la comunicación del Director Médico o Especialistas.</p>
+                    <span class="text-xs font-mono text-neutral-400 mb-2 block">AUTORIDAD CLÍNICA</span>
+                    <h3 class="text-2xl font-medium text-white transition-colors tracking-tight">Digital Twin MD</h3>
+                    <p class="mt-2 text-sm text-neutral-400 font-medium group-hover:text-neutral-200 transition-colors">Escala la comunicación del Director Médico o Especialistas.</p>
                 </div>
-                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-emerald-600">
+                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-white">
                     <i data-lucide="arrow-right" class="w-6 h-6"></i>
                 </div>
             </button>
@@ -251,7 +270,7 @@
                 </div>
             </button>
 
-            <!-- 10. PROPUESTA ESTRATÉGICA (Full Width) - MOVIDO AQUÍ -->
+            <!-- 10. PROPUESTA ESTRATÉGICA (Full Width) -->
             <button onclick="openModal('PROPOSAL_DETAIL')" class="lg:col-span-3 bento-card card-proposal group relative flex flex-col items-start justify-between h-48 p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
                 <div class="relative z-10 w-full flex justify-between items-end">
                     <div>
@@ -286,7 +305,7 @@
                 </div>
             </button>
 
-             <!-- LLAVE EN MANO - MOVIDO AQUÍ -->
+             <!-- LLAVE EN MANO -->
              <button onclick="openModal('TURNKEY')" class="lg:col-span-3 bento-card group relative flex flex-col md:flex-row items-center justify-between min-h-48 p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0 border-l-4 border-l-emerald-500" style="animation-fill-mode: forwards;">
                 <div class="flex-1 pr-6">
                     <div class="flex items-center gap-2 mb-3">
@@ -318,16 +337,16 @@
                 </div>
             </button>
 
-            <!-- 8. DASHBOARD -->
-            <button onclick="openModal('DASHBOARD')" class="lg:col-span-1 bento-card card-dashboard group relative flex flex-col items-start justify-between h-64 p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
-                <div class="relative z-10 p-3 rounded-lg bg-blue-50 text-blue-500 transition-colors group-hover:bg-blue-500 group-hover:text-white">
+            <!-- 8. DASHBOARD (BLACK CARD) -->
+            <button onclick="openModal('DASHBOARD')" class="lg:col-span-1 bento-card-dark group relative flex flex-col items-start justify-between h-64 p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
+                <div class="relative z-10 p-3 rounded-lg bg-neutral-900 text-blue-400 transition-colors group-hover:bg-neutral-800 group-hover:text-white border border-neutral-800">
                     <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
                 </div>
                 <div class="relative z-10 mt-auto">
-                    <h3 class="text-2xl font-medium text-slate-900 transition-colors tracking-tight">Analytics</h3>
-                    <p class="mt-2 text-sm text-slate-500 font-medium group-hover:text-blue-600 transition-colors">KPIs de Rendimiento.</p>
+                    <h3 class="text-2xl font-medium text-white transition-colors tracking-tight">Analytics</h3>
+                    <p class="mt-2 text-sm text-neutral-400 font-medium group-hover:text-neutral-200 transition-colors">KPIs de Rendimiento.</p>
                 </div>
-                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-blue-600">
+                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-blue-400">
                     <i data-lucide="arrow-right" class="w-6 h-6"></i>
                 </div>
             </button>
@@ -472,7 +491,7 @@
                              <p class="text-xs text-slate-500 mb-6 font-mono">PAGO ÚNICO (One-time)</p>
                              
                              <ul class="space-y-3 text-sm text-slate-600">
-                                <li class="flex gap-2 items-center"><i data-lucide="check-circle" class="w-4 h-4 text-slate-400"></i> Grabación profesional (30s - 2min)</li>
+                                <li class="flex gap-2 items-center"><i data-lucide="check-circle" class="w-4 h-4 text-slate-400"></i> Grabación profesional (2 - 10 min)</li>
                                 <li class="flex gap-2 items-center"><i data-lucide="check-circle" class="w-4 h-4 text-slate-400"></i> Clonación de Voz Ultra-Realista</li>
                                 <li class="flex gap-2 items-center"><i data-lucide="check-circle" class="w-4 h-4 text-slate-400"></i> Identidad Visual Completa</li>
                              </ul>
@@ -627,8 +646,8 @@
                         
                         <!-- EXTRAS -->
                         <div class="mt-8 pt-6 border-t border-gray-100 flex flex-wrap gap-4 text-xs font-medium text-gray-500">
-                             <span class="flex items-center gap-1 group-hover:text-emerald-600 transition-colors"><i data-lucide="plus" class="w-3 h-3"></i> 8 Fotos Feed / Producto (550€ Value included)</span>
-                             <span class="flex items-center gap-1 group-hover:text-emerald-600 transition-colors"><i data-lucide="plus" class="w-3 h-3"></i> Advanced Dashboard (300€ Value included)</span>
+                             <span class="flex items-center gap-1 group-hover:text-emerald-600 transition-colors"><i data-lucide="plus" class="w-3 h-3"></i> <strong>ADD-ON:</strong> 8 Fotos Feed / Producto (550€)</span>
+                             <span class="flex items-center gap-1 group-hover:text-emerald-600 transition-colors"><i data-lucide="plus" class="w-3 h-3"></i> <strong>ADD-ON:</strong> Advanced Dashboard (300€)</span>
                         </div>
                         
                         <div class="mt-8 text-center">
