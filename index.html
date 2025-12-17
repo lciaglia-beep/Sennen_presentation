@@ -88,23 +88,24 @@
             color: white;
         }
 
-        /* Dark Card Variant - AHORA NEGRO PURO */
-        .bento-card-dark {
-            background-color: #000000; /* Pure Black */
-            border-color: #262626;     /* Neutral 800 */
-            color: white;
+        /* Gray Card Variant - AHORA GRIS CLARITO */
+        .bento-card-gray {
+            background-color: #f8fafc; /* Slate 50 */
+            border-color: #e2e8f0;
+            color: #1e293b;
         }
-        .bento-card-dark:hover {
-            border-color: #404040;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        .bento-card-gray:hover {
+            background-color: #f1f5f9; /* Slate 100 */
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
-        .bento-card-dark .icon-box {
-            background-color: #262626;
-            color: #d4d4d4;
+        .bento-card-gray .icon-box {
+            background-color: #e2e8f0;
+            color: #475569;
         }
-        .bento-card-dark:hover .icon-box {
-            background-color: #404040;
-            color: white;
+        .bento-card-gray:hover .icon-box {
+            background-color: #cbd5e1;
+            color: #1e293b;
         }
 
         /* Highlight Core Offer */
@@ -240,17 +241,17 @@
                 </div>
             </button>
 
-            <!-- 4. CLON DOCTORES / EXPERTOS (BLACK CARD) -->
-            <button onclick="openModal('OFFER_B')" class="lg:col-span-1 bento-card-dark group relative flex flex-col items-start justify-between h-80 p-8 w-full rounded-xl overflow-hidden text-left delay-400 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
+            <!-- 4. CLON DOCTORES / EXPERTOS (GRAY CARD) -->
+            <button onclick="openModal('OFFER_B')" class="lg:col-span-1 bento-card-gray group relative flex flex-col items-start justify-between h-80 p-8 w-full rounded-xl overflow-hidden text-left delay-400 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
                 <div class="relative z-10 p-3 rounded-lg icon-box transition-colors duration-300">
                     <i data-lucide="fingerprint" class="w-6 h-6"></i>
                 </div>
                 <div class="relative z-10 mt-auto">
-                    <span class="text-xs font-mono text-neutral-400 mb-2 block">AUTORIDAD CLÍNICA</span>
-                    <h3 class="text-2xl font-medium text-white transition-colors tracking-tight">Digital Twin MD</h3>
-                    <p class="mt-2 text-sm text-neutral-400 font-medium group-hover:text-neutral-200 transition-colors">Escala la comunicación del Director Médico o Especialistas.</p>
+                    <span class="text-xs font-mono text-slate-400 mb-2 block">AUTORIDAD CLÍNICA</span>
+                    <h3 class="text-2xl font-medium text-slate-900 transition-colors tracking-tight">Digital Twin MD</h3>
+                    <p class="mt-2 text-sm text-slate-500 font-medium group-hover:text-slate-600 transition-colors">Escala la comunicación del Director Médico o Especialistas.</p>
                 </div>
-                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-white">
+                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-slate-400">
                     <i data-lucide="arrow-right" class="w-6 h-6"></i>
                 </div>
             </button>
@@ -337,16 +338,16 @@
                 </div>
             </button>
 
-            <!-- 8. DASHBOARD (BLACK CARD) -->
-            <button onclick="openModal('DASHBOARD')" class="lg:col-span-1 bento-card-dark group relative flex flex-col items-start justify-between h-64 p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
-                <div class="relative z-10 p-3 rounded-lg bg-neutral-900 text-blue-400 transition-colors group-hover:bg-neutral-800 group-hover:text-white border border-neutral-800">
+            <!-- 8. DASHBOARD (GRAY CARD) -->
+            <button onclick="openModal('DASHBOARD')" class="lg:col-span-1 bento-card-gray group relative flex flex-col items-start justify-between h-64 p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
+                <div class="relative z-10 p-3 rounded-lg bg-slate-200 text-blue-500 transition-colors group-hover:bg-blue-100 group-hover:text-blue-600">
                     <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
                 </div>
                 <div class="relative z-10 mt-auto">
-                    <h3 class="text-2xl font-medium text-white transition-colors tracking-tight">Analytics</h3>
-                    <p class="mt-2 text-sm text-neutral-400 font-medium group-hover:text-neutral-200 transition-colors">KPIs de Rendimiento.</p>
+                    <h3 class="text-2xl font-medium text-slate-900 transition-colors tracking-tight">Analytics</h3>
+                    <p class="mt-2 text-sm text-slate-500 font-medium group-hover:text-blue-600 transition-colors">KPIs de Rendimiento.</p>
                 </div>
-                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-blue-400">
+                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-blue-500">
                     <i data-lucide="arrow-right" class="w-6 h-6"></i>
                 </div>
             </button>
@@ -491,8 +492,8 @@
                              <p class="text-xs text-slate-500 mb-6 font-mono">PAGO ÚNICO (One-time)</p>
                              
                              <ul class="space-y-3 text-sm text-slate-600">
-                                <li class="flex gap-2 items-center"><i data-lucide="check-circle" class="w-4 h-4 text-slate-400"></i> Grabación profesional (2 - 10 min)</li>
-                                <li class="flex gap-2 items-center"><i data-lucide="check-circle" class="w-4 h-4 text-slate-400"></i> Clonación de Voz Ultra-Realista</li>
+                                <li class="flex gap-2 items-center"><i data-lucide="check-circle" class="w-4 h-4 text-slate-400"></i> Grabación profesional (2 a 10 minutos)</li>
+                                <li class="flex gap-2 items-center"><i data-lucide="check-circle" class="w-4 h-4 text-slate-400"></i> Clonación voz (30 a 1 hora)</li>
                                 <li class="flex gap-2 items-center"><i data-lucide="check-circle" class="w-4 h-4 text-slate-400"></i> Identidad Visual Completa</li>
                              </ul>
                         </div>
