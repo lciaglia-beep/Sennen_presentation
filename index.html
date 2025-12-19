@@ -117,14 +117,6 @@
             border-color: #059669;
         }
 
-        /* Dashboard Card Special Style */
-        .card-dashboard {
-            background: #ffffff;
-        }
-        .card-dashboard:hover {
-            border-color: #3b82f6; /* Azul Tech */
-        }
-
         /* Propuesta Card */
         .card-proposal {
             background-color: #f8fafc;
@@ -160,21 +152,21 @@
         <div class="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-blue-50/40 blur-[120px] rounded-full"></div>
     </div>
 
-    <!-- Contenedor -->
-    <div class="relative max-w-7xl mx-auto px-6 py-12 md:py-24 z-10">
+    <!-- Contenedor Principal (Ajustado padding para móvil) -->
+    <div class="relative max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-24 z-10">
         
         <!-- Header -->
-        <header class="mb-16 animate-slide-up flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+        <header class="mb-12 md:mb-16 animate-slide-up flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-8">
             <div class="flex-1">
-                <div class="flex items-center gap-3 mb-6">
+                <div class="flex items-center gap-3 mb-4 md:mb-6">
                     <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
                     <span class="text-xs font-mono tracking-[0.2em] uppercase text-slate-400">SENNEN.AGENCY</span>
                 </div>
-                <h1 class="text-5xl md:text-7xl font-medium tracking-tighter text-slate-900 mb-6 leading-tight">
+                <h1 class="text-4xl md:text-7xl font-medium tracking-tighter text-slate-900 mb-4 md:mb-6 leading-tight">
                     Aesthetic <br/>
                     <span class="text-slate-300">Intelligence.</span>
                 </h1>
-                <p class="text-xl text-slate-500 max-w-xl font-light leading-relaxed">
+                <p class="text-lg md:text-xl text-slate-500 max-w-xl font-light leading-relaxed">
                     Infraestructura de contenido clínico y estético para la era de la IA.
                     <span class="text-emerald-600 font-normal">Escalable. Global. Automatizado.</span>
                 </p>
@@ -185,7 +177,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             
             <!-- 1. NOTICIA / CONTEXTO -->
-            <button onclick="openModal('CONTEXT')" class="lg:col-span-2 bento-card group relative flex flex-col items-start justify-between h-64 p-8 w-full rounded-xl overflow-hidden text-left delay-0 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
+            <button onclick="openModal('CONTEXT')" class="lg:col-span-2 bento-card group relative flex flex-col items-start justify-between min-h-[250px] p-6 md:p-8 w-full rounded-xl overflow-hidden text-left delay-0 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
                 <div class="relative z-10 flex justify-between w-full items-start">
                     <div class="p-3 rounded-lg icon-box transition-colors duration-300">
                         <i data-lucide="activity" class="w-6 h-6"></i>
@@ -194,15 +186,15 @@
                 </div>
                 <div class="relative z-10 mt-auto">
                     <h3 class="text-2xl md:text-3xl font-medium text-slate-800 card-title transition-colors tracking-tight">El Nuevo Estándar en Medicina Estética</h3>
-                    <p class="mt-2 text-sm text-slate-500 font-medium tracking-wide">Las marcas premium migran a embajadores digitales para garantizar la perfección visual clínica.</p>
+                    <p class="mt-2 text-sm text-slate-500 font-medium tracking-wide">Las marcas premium migran a embajadores digitales.</p>
                 </div>
-                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-emerald-600">
+                <div class="arrow-icon absolute bottom-6 right-6 md:bottom-8 md:right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-emerald-600">
                     <i data-lucide="arrow-right" class="w-6 h-6"></i>
                 </div>
             </button>
 
             <!-- 2. PRODUCT SHOWCASE (Generic) -->
-            <div class="lg:col-span-1 bento-card group relative flex flex-col items-center justify-center h-64 p-0 w-full rounded-xl overflow-hidden text-left delay-100 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
+            <div class="lg:col-span-1 bento-card group relative flex flex-col items-center justify-center min-h-[250px] p-0 w-full rounded-xl overflow-hidden text-left delay-100 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
                 <div class="absolute inset-0 bg-slate-50">
                     <img src="foto.png" class="w-full h-full object-cover opacity-90 product-img" alt="Aesthetic Lifestyle" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                     <!-- Fallback if image missing -->
@@ -217,14 +209,14 @@
             </div>
 
             <!-- SEPARADOR -->
-            <div class="lg:col-span-3 mt-8 mb-2 flex items-center gap-4 delay-200 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
+            <div class="lg:col-span-3 mt-4 md:mt-8 mb-2 flex items-center gap-4 delay-200 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
                 <div class="h-px bg-slate-200 flex-1"></div>
                 <span class="text-xs font-mono uppercase text-slate-400 tracking-widest">Ecosistema de Soluciones</span>
                 <div class="h-px bg-slate-200 flex-1"></div>
             </div>
 
             <!-- 3. PAQUETES UGC (CORE) -->
-            <button onclick="openModal('OFFER_A')" class="lg:col-span-1 bento-card card-highlight group relative flex flex-col items-start justify-between h-80 p-8 w-full rounded-xl overflow-hidden text-left delay-300 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
+            <button onclick="openModal('OFFER_A')" class="lg:col-span-1 bento-card card-highlight group relative flex flex-col items-start justify-between min-h-[300px] p-6 md:p-8 w-full rounded-xl overflow-hidden text-left delay-300 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
                 <div class="absolute top-4 right-4 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider shadow-sm">
                     Core Solution
                 </div>
@@ -236,28 +228,28 @@
                     <h3 class="text-2xl font-medium text-slate-900 transition-colors tracking-tight">Embajadores AI</h3>
                     <p class="mt-2 text-sm text-slate-600 font-medium">Avatares hiperrealistas para campañas de producto masivas.</p>
                 </div>
-                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-emerald-600">
+                <div class="arrow-icon absolute bottom-6 right-6 md:bottom-8 md:right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-emerald-600">
                     <i data-lucide="arrow-right" class="w-6 h-6"></i>
                 </div>
             </button>
 
             <!-- 4. CLON DOCTORES / EXPERTOS (GRAY CARD) -->
-            <button onclick="openModal('OFFER_B')" class="lg:col-span-1 bento-card-gray group relative flex flex-col items-start justify-between h-80 p-8 w-full rounded-xl overflow-hidden text-left delay-400 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
+            <button onclick="openModal('OFFER_B')" class="lg:col-span-1 bento-card-gray group relative flex flex-col items-start justify-between min-h-[300px] p-6 md:p-8 w-full rounded-xl overflow-hidden text-left delay-400 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
                 <div class="relative z-10 p-3 rounded-lg icon-box transition-colors duration-300">
                     <i data-lucide="fingerprint" class="w-6 h-6"></i>
                 </div>
                 <div class="relative z-10 mt-auto">
                     <span class="text-xs font-mono text-slate-400 mb-2 block">AUTORIDAD CLÍNICA</span>
                     <h3 class="text-2xl font-medium text-slate-900 transition-colors tracking-tight">Digital Twin MD</h3>
-                    <p class="mt-2 text-sm text-slate-500 font-medium group-hover:text-slate-600 transition-colors">Escala la comunicación del Director Médico o Especialistas.</p>
+                    <p class="mt-2 text-sm text-slate-500 font-medium group-hover:text-slate-600 transition-colors">Escala la comunicación del Director Médico.</p>
                 </div>
-                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-slate-400">
+                <div class="arrow-icon absolute bottom-6 right-6 md:bottom-8 md:right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-slate-400">
                     <i data-lucide="arrow-right" class="w-6 h-6"></i>
                 </div>
             </button>
 
             <!-- 5. ACADEMIA / PROTOCOLOS -->
-            <button onclick="openModal('OFFER_C')" class="lg:col-span-1 bento-card group relative flex flex-col items-start justify-between h-80 p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
+            <button onclick="openModal('OFFER_C')" class="lg:col-span-1 bento-card group relative flex flex-col items-start justify-between min-h-[300px] p-6 md:p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
                 <div class="relative z-10 p-3 rounded-lg icon-box transition-colors duration-300">
                     <i data-lucide="graduation-cap" class="w-6 h-6"></i>
                 </div>
@@ -266,31 +258,31 @@
                     <h3 class="text-2xl font-medium text-slate-800 transition-colors tracking-tight">Protocol Education</h3>
                     <p class="mt-2 text-sm text-slate-500 font-medium">Training estandarizado de protocolos y aparatología.</p>
                 </div>
-                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-emerald-600">
+                <div class="arrow-icon absolute bottom-6 right-6 md:bottom-8 md:right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-emerald-600">
                     <i data-lucide="arrow-right" class="w-6 h-6"></i>
                 </div>
             </button>
 
             <!-- 10. PROPUESTA ESTRATÉGICA (Full Width) -->
-            <button onclick="openModal('PROPOSAL_DETAIL')" class="lg:col-span-3 bento-card card-proposal group relative flex flex-col items-start justify-between h-48 p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
-                <div class="relative z-10 w-full flex justify-between items-end">
+            <button onclick="openModal('PROPOSAL_DETAIL')" class="lg:col-span-3 bento-card card-proposal group relative flex flex-col items-start justify-between min-h-[200px] p-6 md:p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
+                <div class="relative z-10 w-full flex flex-col md:flex-row justify-between items-end gap-4 md:gap-0">
                     <div>
                         <div class="flex items-center gap-2 mb-2">
                             <i data-lucide="file-text" class="w-5 h-5 text-emerald-500"></i>
                             <span class="text-xs font-mono uppercase tracking-widest text-emerald-600">Propuesta Estratégica</span>
                         </div>
-                        <h3 class="text-3xl font-medium text-slate-900 transition-colors tracking-tight">Strategic Partnership</h3>
+                        <h3 class="text-2xl md:text-3xl font-medium text-slate-900 transition-colors tracking-tight">Strategic Partnership</h3>
                         <p class="mt-2 text-sm text-slate-500 font-medium">Plan detallado para implementación corporativa.</p>
                     </div>
-                    <div class="bg-white px-5 py-3 rounded-lg border border-slate-200 shadow-sm group-hover:bg-slate-50 group-hover:border-slate-300 transition-all text-slate-700 font-medium text-sm flex items-center gap-2">
-                        <span>Ver Detalles</span>
+                    <div class="w-full md:w-auto bg-white px-5 py-3 rounded-lg border border-slate-200 shadow-sm group-hover:bg-slate-50 group-hover:border-slate-300 transition-all text-slate-700 font-medium text-sm flex items-center justify-between md:justify-start gap-2">
+                        <span>Ver Detalles & Pricing</span>
                         <i data-lucide="chevron-right" class="w-4 h-4"></i>
                     </div>
                 </div>
             </button>
 
             <!-- 6. PRUEBAS (Samples) -->
-            <button onclick="openModal('SAMPLES')" class="lg:col-span-3 bento-card group relative flex flex-col items-start justify-between min-h-64 p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
+            <button onclick="openModal('SAMPLES')" class="lg:col-span-3 bento-card group relative flex flex-col items-start justify-between min-h-[280px] p-6 md:p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
                 <div class="relative z-10 flex justify-between w-full items-start">
                     <div class="p-3 rounded-lg icon-box transition-colors duration-300">
                         <i data-lucide="play-circle" class="w-6 h-6"></i>
@@ -301,54 +293,26 @@
                     <h3 class="text-2xl font-medium text-slate-800 transition-colors tracking-tight">Galería de Pruebas</h3>
                     <p class="mt-2 text-sm text-slate-500 font-medium">Ver ejemplos de realismo y consistencia estética.</p>
                 </div>
-                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-emerald-600">
+                <div class="arrow-icon absolute bottom-6 right-6 md:bottom-8 md:right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-emerald-600">
                     <i data-lucide="arrow-right" class="w-6 h-6"></i>
                 </div>
             </button>
 
              <!-- LLAVE EN MANO -->
-             <button onclick="openModal('TURNKEY')" class="lg:col-span-3 bento-card group relative flex flex-col md:flex-row items-center justify-between min-h-48 p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0 border-l-4 border-l-emerald-500" style="animation-fill-mode: forwards;">
-                <div class="flex-1 pr-6">
+             <button onclick="openModal('TURNKEY')" class="lg:col-span-3 bento-card group relative flex flex-col md:flex-row items-center justify-between min-h-[200px] p-6 md:p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0 border-l-4 border-l-emerald-500" style="animation-fill-mode: forwards;">
+                <div class="flex-1 pr-6 mb-4 md:mb-0">
                     <div class="flex items-center gap-2 mb-3">
                         <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500"></i>
                         <span class="text-xs font-mono uppercase tracking-widest text-emerald-600 font-bold">Implementación 360°</span>
                     </div>
-                    <h3 class="text-3xl font-medium text-slate-900 mb-2">Servicio Integral White Label</h3>
-                    <p class="text-slate-500 max-w-2xl leading-relaxed">
-                        Diseñado para clínicas y marcas premium. Externalización total de la producción audiovisual técnica y promocional.
+                    <h3 class="text-2xl md:text-3xl font-medium text-slate-900 mb-2">Servicio Integral White Label</h3>
+                    <p class="text-slate-500 max-w-2xl leading-relaxed text-sm md:text-base">
+                        Diseñado para clínicas y marcas premium. Externalización total de la producción.
                     </p>
                 </div>
-                <div class="mt-6 md:mt-0 flex items-center gap-2 bg-slate-50 px-6 py-3 rounded-full border border-slate-200 group-hover:bg-slate-100 transition-colors">
+                <div class="w-full md:w-auto flex items-center justify-between md:justify-start gap-2 bg-slate-50 px-6 py-3 rounded-full border border-slate-200 group-hover:bg-slate-100 transition-colors">
                     <span class="text-sm font-medium text-slate-700">Ver Proceso</span>
                     <i data-lucide="arrow-right" class="w-4 h-4 text-slate-400 group-hover:text-emerald-500 transition-colors"></i>
-                </div>
-            </button>
-
-            <!-- 7. ROADMAP -->
-            <button onclick="openModal('ROADMAP')" class="lg:col-span-2 bento-card group relative flex flex-col items-start justify-between h-64 p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
-                <div class="relative z-10 p-3 rounded-lg icon-box transition-colors duration-300">
-                    <i data-lucide="map" class="w-6 h-6"></i>
-                </div>
-                <div class="relative z-10 mt-auto">
-                    <h3 class="text-2xl font-medium text-slate-800 transition-colors tracking-tight">Roadmap de Implementación</h3>
-                    <p class="mt-2 text-sm text-slate-500 font-medium">Planificación Trimestral.</p>
-                </div>
-                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-emerald-600">
-                    <i data-lucide="arrow-right" class="w-6 h-6"></i>
-                </div>
-            </button>
-
-            <!-- 8. DASHBOARD (GRAY CARD) -->
-            <button onclick="openModal('DASHBOARD')" class="lg:col-span-1 bento-card-gray group relative flex flex-col items-start justify-between h-64 p-8 w-full rounded-xl overflow-hidden text-left delay-500 animate-slide-up opacity-0" style="animation-fill-mode: forwards;">
-                <div class="relative z-10 p-3 rounded-lg bg-slate-200 text-blue-500 transition-colors group-hover:bg-blue-100 group-hover:text-blue-600">
-                    <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
-                </div>
-                <div class="relative z-10 mt-auto">
-                    <h3 class="text-2xl font-medium text-slate-900 transition-colors tracking-tight">Analytics</h3>
-                    <p class="mt-2 text-sm text-slate-500 font-medium group-hover:text-blue-600 transition-colors">KPIs de Rendimiento.</p>
-                </div>
-                <div class="arrow-icon absolute bottom-8 right-8 opacity-0 transform translate-x-4 transition-all duration-500 text-blue-500">
-                    <i data-lucide="arrow-right" class="w-6 h-6"></i>
                 </div>
             </button>
 
@@ -360,7 +324,7 @@
                     <i data-lucide="heart" class="w-6 h-6"></i>
                 </div>
                 <div class="relative z-10">
-                    <h3 class="text-2xl font-medium text-slate-800 transition-colors tracking-tight">Human Touch > AI Efficiency</h3>
+                    <h3 class="text-xl md:text-2xl font-medium text-slate-800 transition-colors tracking-tight">Human Touch > AI Efficiency</h3>
                     <p class="mt-2 text-sm text-slate-500 font-medium">La tecnología libera al profesional para enfocarse en el paciente.</p>
                 </div>
             </button>
@@ -368,7 +332,7 @@
         </div>
 
         <!-- Footer -->
-        <footer class="mt-32 border-t border-slate-200 pt-8 flex justify-between items-center text-slate-400 text-xs font-mono uppercase tracking-widest">
+        <footer class="mt-20 md:mt-32 border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-400 text-xs font-mono uppercase tracking-widest gap-4 md:gap-0">
             <p>2025 AI Aesthetic Engine</p>
             <p>Confidential Document</p>
         </footer>
@@ -377,7 +341,7 @@
 
     <!-- MODAL DE CONTENIDO GENERAL -->
     <div id="modal-overlay" class="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 modal-hidden bg-slate-900/20 backdrop-blur-sm">
-        <button onclick="closeModal()" class="absolute top-6 right-6 md:top-8 md:right-8 z-[60] p-2 rounded-full bg-white text-slate-400 hover:text-slate-800 hover:bg-slate-100 border border-slate-200 shadow-lg transition-all">
+        <button onclick="closeModal()" class="absolute top-4 right-4 md:top-8 md:right-8 z-[60] p-2 rounded-full bg-white text-slate-400 hover:text-slate-800 hover:bg-slate-100 border border-slate-200 shadow-lg transition-all">
             <i data-lucide="x" class="w-5 h-5"></i>
         </button>
         <div onclick="closeModal()" class="absolute inset-0 z-40"></div>
@@ -390,7 +354,7 @@
 
     <!-- MODAL REPRODUCTOR DE VIDEO -->
     <div id="video-player-overlay" class="fixed inset-0 z-[100] hidden bg-white/90 flex items-center justify-center p-4 md:p-12 transition-opacity duration-300 backdrop-blur-md">
-        <button onclick="closeVideoPlayer()" class="absolute top-6 right-6 z-[110] p-4 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 transition-all border border-slate-200">
+        <button onclick="closeVideoPlayer()" class="absolute top-4 right-4 z-[110] p-4 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 transition-all border border-slate-200">
             <i data-lucide="x" class="w-8 h-8"></i>
         </button>
         <div class="relative w-full max-w-6xl aspect-video bg-black rounded-xl overflow-hidden shadow-2xl border border-slate-200">
@@ -410,10 +374,10 @@
                             <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                             <span class="text-xs font-mono uppercase tracking-widest text-emerald-600">Health & Aesthetic Trends</span>
                         </div>
-                        <h2 class="text-3xl md:text-5xl font-medium tracking-tighter text-slate-900 mb-6">
+                        <h2 class="text-2xl md:text-5xl font-medium tracking-tighter text-slate-900 mb-6">
                             "La consistencia visual genera confianza clínica."
                         </h2>
-                        <p class="text-xl text-slate-500 font-light leading-relaxed">
+                        <p class="text-lg md:text-xl text-slate-500 font-light leading-relaxed">
                             Las marcas de medicina estética están migrando a <span class="text-slate-900 font-medium">Embajadores Digitales</span>. 
                             ¿La razón? Una imagen libre de imperfecciones no deseadas, disponibilidad 24/7 y la capacidad de comunicar protocolos complejos en 30 idiomas.
                         </p>
@@ -433,7 +397,7 @@
             OFFER_A: `
                 <div class="animate-zoom-in">
                     <span class="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 block">Estrategia Core</span>
-                    <h2 class="text-4xl font-medium text-slate-900 mb-6">Paquetes de Embajadores Digitales</h2>
+                    <h2 class="text-3xl md:text-4xl font-medium text-slate-900 mb-6">Paquetes de Embajadores Digitales</h2>
                     <p class="text-slate-500 text-lg mb-8 leading-relaxed">
                         Creamos una "Squad" de prescriptores sintéticos. Perfiles diversos (edad, fototipo) hablando de los beneficios clínicos y estéticos de la marca.
                     </p>
@@ -445,8 +409,8 @@
                                 <h4 class="text-slate-900 font-medium text-xl">Pack Essential</h4>
                                 <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-1 rounded font-bold uppercase">Starter</span>
                             </div>
-                            <div class="text-2xl font-bold text-slate-900 mb-1">1.800€ <span class="text-sm font-normal text-slate-400">/mes</span></div>
-                            <p class="text-xs text-slate-500 mb-6">IVA no incluido</p>
+                            <div class="text-2xl font-bold text-slate-900 mb-1">Consultar</div>
+                            <p class="text-xs text-slate-500 mb-6">Plan de entrada</p>
                             
                             <ul class="text-sm text-slate-600 space-y-3">
                                 <li class="flex gap-2 items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> <strong>8 Vídeos Cortos</strong> (Reels/TikTok)</li>
@@ -463,8 +427,8 @@
                                 <h4 class="text-emerald-900 font-medium text-xl">Pack Clinic Growth</h4>
                                 <span class="bg-emerald-200 text-emerald-800 text-[10px] px-2 py-1 rounded font-bold uppercase">Pro</span>
                             </div>
-                            <div class="text-2xl font-bold text-emerald-700 mb-1">2.800€ <span class="text-sm font-normal text-emerald-600/70">/mes</span></div>
-                            <p class="text-xs text-emerald-600/60 mb-6">IVA no incluido</p>
+                            <div class="text-2xl font-bold text-emerald-700 mb-1">Consultar</div>
+                            <p class="text-xs text-emerald-600/60 mb-6">Máximo impacto visual</p>
                             
                             <ul class="text-sm text-emerald-800 space-y-3">
                                 <li class="flex gap-2 items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> <strong>16 Vídeos Mensuales</strong> (Alta Frecuencia)</li>
@@ -478,8 +442,8 @@
             OFFER_B: `
                 <div class="animate-slide-up">
                     <span class="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 block">Marca Personal Médica</span>
-                    <h2 class="text-4xl md:text-5xl font-medium text-slate-900 mb-4">Digital Twin: Director Médico</h2>
-                    <p class="text-xl text-slate-500 mb-10 max-w-2xl">
+                    <h2 class="text-3xl md:text-5xl font-medium text-slate-900 mb-4">Digital Twin: Director Médico</h2>
+                    <p class="text-lg md:text-xl text-slate-500 mb-10 max-w-2xl">
                         Consultar disponibilidad y roadmap de integración.
                     </p>
                     
@@ -488,7 +452,7 @@
                         <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm relative overflow-hidden">
                              <div class="absolute top-0 left-0 w-1 h-full bg-slate-200"></div>
                              <h3 class="text-lg font-bold text-slate-400 uppercase tracking-widest mb-2">Fase 1: Configuración</h3>
-                             <div class="text-4xl font-bold text-slate-900 mb-1">1.500€</div>
+                             <div class="text-4xl font-bold text-slate-900 mb-1">Consultar</div>
                              <p class="text-xs text-slate-500 mb-6 font-mono">PAGO ÚNICO (One-time)</p>
                              
                              <ul class="space-y-3 text-sm text-slate-600">
@@ -502,7 +466,7 @@
                         <div class="p-8 rounded-2xl bg-emerald-50 text-emerald-900 border border-emerald-200 shadow-md relative overflow-hidden">
                              <div class="absolute top-0 left-0 w-1 h-full bg-emerald-400"></div>
                              <h3 class="text-lg font-bold text-emerald-600 uppercase tracking-widest mb-2">Fase 2: Retainer</h3>
-                             <div class="text-4xl font-bold text-emerald-800 mb-1">2.000€</div>
+                             <div class="text-4xl font-bold text-emerald-800 mb-1">Consultar</div>
                              <p class="text-xs text-emerald-600/70 mb-6 font-mono">/ MES (Recurrente)</p>
                              
                              <ul class="space-y-3 text-sm text-emerald-800">
@@ -518,7 +482,7 @@
             OFFER_C: `
                 <div class="animate-zoom-in">
                     <span class="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 block">Educación Corporativa</span>
-                    <h2 class="text-4xl font-medium text-slate-900 mb-6">Academia Digital & Protocolos</h2>
+                    <h2 class="text-3xl md:text-4xl font-medium text-slate-900 mb-6">Academia Digital & Protocolos</h2>
                     <p class="text-slate-500 text-lg mb-8 leading-relaxed">
                         Transformamos manuales de aparatología y procedimientos en videos educativos atractivos presentados por avatares expertos.
                     </p>
@@ -586,12 +550,12 @@
                 <div class="animate-slide-up space-y-12">
                     <div class="border-b border-black pb-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-0">
                         <div>
-                            <h2 class="text-2xl md:text-3xl font-medium text-black mb-2 tracking-tight">Ecosistema de Campaña</h2>
+                            <h2 class="text-2xl md:text-3xl font-medium text-black mb-2 tracking-tight">Propuesta Estratégica</h2>
                             <p class="text-gray-500 text-sm md:text-base">Producción Mensual y Entregables.</p>
                         </div>
                         <div class="text-left md:text-right w-full md:w-auto">
                             <span class="text-xs font-mono uppercase tracking-widest text-emerald-600 block md:inline-block mb-1 md:mb-0">Total Investment</span>
-                            <div class="text-3xl md:text-4xl font-bold text-emerald-600">3.500€<span class="text-sm font-normal text-gray-400">/mes</span></div>
+                            <div class="text-3xl md:text-4xl font-bold text-emerald-600">1.500€<span class="text-sm font-normal text-gray-400"> Setup (Mes 1)</span></div>
                         </div>
                     </div>
 
@@ -647,8 +611,8 @@
                         
                         <!-- EXTRAS -->
                         <div class="mt-8 pt-6 border-t border-gray-100 flex flex-wrap gap-4 text-xs font-medium text-gray-500">
-                             <span class="flex items-center gap-1 group-hover:text-emerald-600 transition-colors"><i data-lucide="plus" class="w-3 h-3"></i> <strong>ADD-ON:</strong> 8 Fotos Feed / Producto (550€)</span>
-                             <span class="flex items-center gap-1 group-hover:text-emerald-600 transition-colors"><i data-lucide="plus" class="w-3 h-3"></i> <strong>ADD-ON:</strong> Advanced Dashboard (300€)</span>
+                             <span class="flex items-center gap-1 group-hover:text-emerald-600 transition-colors"><i data-lucide="plus" class="w-3 h-3"></i> <strong>ADD-ON:</strong> 8 Fotos Feed / Producto</span>
+                             <span class="flex items-center gap-1 group-hover:text-emerald-600 transition-colors"><i data-lucide="plus" class="w-3 h-3"></i> <strong>ADD-ON:</strong> Advanced Dashboard</span>
                         </div>
                         
                         <div class="mt-8 text-center">
@@ -680,35 +644,6 @@
                                     <li class="flex gap-3"><span class="w-1.5 h-1.5 bg-black rounded-full mt-1.5"></span>Entrega de Archivos Finales</li>
                                 </ul>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            `,
-            ROADMAP: `
-                <div class="space-y-10 animate-slide-up">
-                    <div class="border-b border-slate-200 pb-6">
-                        <h3 class="text-3xl text-slate-900 font-medium">Roadmap de Lanzamiento</h3>
-                        <p class="text-slate-500 mt-2">Implementación Típica: 90 Días</p>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-white p-6 rounded-xl border border-slate-200 relative overflow-hidden group hover:border-emerald-400 transition-colors shadow-sm">
-                            <div class="absolute top-0 right-0 p-4 opacity-10 font-bold text-6xl text-slate-900">01</div>
-                            <h4 class="text-lg text-slate-900 font-medium mb-2 relative z-10">Setup & Casting</h4>
-                            <p class="text-slate-400 text-xs mb-4 uppercase tracking-widest">Mes 1</p>
-                            <p class="text-sm text-slate-600">Selección de rostros digitales. Definición de tono de voz. Foto producto por parte del Cliente.</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl border border-slate-200 relative overflow-hidden group hover:border-emerald-400 transition-colors shadow-sm">
-                            <div class="absolute top-0 right-0 p-4 opacity-10 font-bold text-6xl text-slate-900">02</div>
-                            <h4 class="text-lg text-slate-900 font-medium mb-2 relative z-10">Producción</h4>
-                            <p class="text-slate-400 text-xs mb-4 uppercase tracking-widest">Mes 2</p>
-                            <p class="text-sm text-slate-600">Generación de la primera librería de contenidos (16-20 videos). Tests A/B de mensajes.</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl border border-slate-200 relative overflow-hidden group hover:border-emerald-400 transition-colors shadow-sm">
-                            <div class="absolute top-0 right-0 p-4 opacity-10 font-bold text-6xl text-slate-900">03</div>
-                            <h4 class="text-lg text-slate-900 font-medium mb-2 relative z-10">Escala</h4>
-                            <p class="text-slate-400 text-xs mb-4 uppercase tracking-widest">Mes 3</p>
-                            <p class="text-sm text-slate-600">Revisión de métricas. Replicación de avatares ganadores a otros idiomas o líneas de tratamiento.</p>
                         </div>
                     </div>
                 </div>
@@ -754,57 +689,13 @@
                     </div>
                 </div>
             `,
-            DASHBOARD: `
-            <div class="animate-zoom-in space-y-8">
-                 <div class="flex items-center gap-3 mb-6 text-blue-500">
-                    <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
-                    <span class="text-xs font-mono uppercase tracking-widest">Client Portal</span>
-                </div>
-                <div class="flex flex-col md:flex-row justify-between items-start gap-8">
-                    <div class="flex-1">
-                        <h2 class="text-3xl font-medium text-slate-900 mb-4">Dashboard de Rendimiento</h2>
-                        <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">Servicio a Consultar</span>
-                        <p class="text-slate-500 text-lg mb-6 leading-relaxed">
-                            Medición de impacto real en captación de pacientes y branding.
-                        </p>
-                        <ul class="space-y-4">
-                            <li class="flex items-center gap-3">
-                                <div class="bg-blue-50 p-2 rounded text-blue-600"><i data-lucide="pie-chart" class="w-4 h-4"></i></div>
-                                <span class="text-slate-600"><strong>Performance Wheel:</strong> Análisis de retención visual.</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="bg-blue-50 p-2 rounded text-blue-600"><i data-lucide="trending-up" class="w-4 h-4"></i></div>
-                                <span class="text-slate-600"><strong>Lead Tracking:</strong> Conversión directa desde contenidos.</span>
-                            </li>
-                        </ul>
-                    </div>
-                     <div class="flex-1 w-full bg-white rounded-xl border border-slate-200 shadow-lg p-6 relative overflow-hidden">
-                         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-emerald-400"></div>
-                         <div class="flex justify-between items-center mb-6">
-                            <span class="text-xs font-mono text-slate-400">PERFORMANCE METRICS</span>
-                            <span class="text-emerald-600 text-xs font-bold">+124% Engagement</span>
-                         </div>
-                         <div class="relative w-32 h-32 mx-auto mb-6">
-                            <svg class="w-full h-full transform -rotate-90">
-                                <circle cx="64" cy="64" r="56" stroke="#f1f5f9" stroke-width="12" fill="none"></circle>
-                                <circle cx="64" cy="64" r="56" stroke="#3b82f6" stroke-width="12" fill="none" stroke-dasharray="351" stroke-dashoffset="100"></circle>
-                            </svg>
-                            <div class="absolute inset-0 flex items-center justify-center flex-col">
-                                <span class="text-2xl font-bold text-slate-900">8.5</span>
-                                <span class="text-[10px] text-slate-400 uppercase">Score</span>
-                            </div>
-                         </div>
-                    </div>
-                </div>
-            </div>
-            `,
             COMMUNITY: `
                 <div class="text-center space-y-8 animate-zoom-in py-8">
                     <div class="inline-flex p-4 rounded-full bg-emerald-50 text-emerald-600 mb-4">
                         <i data-lucide="heart" class="w-8 h-8"></i>
                     </div>
-                    <h2 class="text-4xl text-slate-900 font-medium">Filosofía</h2>
-                    <p class="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed mb-8">
+                    <h2 class="text-2xl md:text-4xl font-medium text-slate-900 mb-6">Filosofía</h2>
+                    <p class="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed mb-8">
                         La IA automatiza la atracción (contenido), pero la verdadera retención nace de la conexión humana. 
                         <br><br>
                         Al liberar a la clínica y a los doctores de la carga de producción de contenido, pueden enfocar el 100% de su energía en lo que ninguna IA puede reemplazar: <strong>el trato con el paciente.</strong>
